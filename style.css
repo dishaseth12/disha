@@ -1,0 +1,535 @@
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+font-family: gilroy;
+}
+html,body{
+height: 100%;
+width: 100%;
+}
+.home{
+    background-color: #EEEAE4;
+    width: 100%;
+    overflow: hidden;
+}
+.nav{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+.nav img{
+    cursor: pointer;
+}
+.navpart{
+    display: flex;
+    gap: 15px;
+}
+.navpart button{
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid rgb(192, 188, 184);
+    border-radius: 50px;
+    padding: 13px 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.navpart button:nth-child(1):after{
+    content: "";
+    position: absolute;
+    height: 46px;
+    width: 90px;
+    background-color: black;
+    border-radius: 50px;
+    left: 0;
+    top:100%;
+    transition: all ease 0.5s;
+}
+.navpart button:nth-child(2):after{
+    content: "";
+    position: absolute;
+    height: 46px;
+    width: 100px;
+    background-color: black;
+    border-radius: 50px;
+    left: 0;
+    top:100%;
+    transition: all ease 0.5s;
+}
+.navpart button:nth-child(3):after{
+    content: "";
+    position: absolute;
+    height: 46px;
+    width: 111px;
+    background-color: black;
+    border-radius: 50px;
+    left: 0;
+    top:100%;
+    transition: all ease 0.5s;
+}
+.navpart button:hover::after{
+    top: 0;
+    z-index: -1;
+}
+.navpart button:hover{
+    color: #EEEAE4;
+    z-index: 99;
+}
+.first{
+    height:80vh;
+    width: 100%;
+    background-color: #EEEAE4;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 80px 30px;
+    position: relative;
+}
+.first p{
+    font-size: 28px;
+    font-weight: 600;
+    width: 440px;
+}
+.first h1{
+    font-size: 170px;
+    font-weight: 600;
+    width: 800px;
+    text-align: end;
+    line-height: 130px;
+}
+.firstpart{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 95%;
+    opacity: .2;
+}
+.second{
+    height: 120vh;
+    width: 100%;
+    background-color: #EEEAE4;
+    padding:30px;
+    position: relative;
+}
+.shape{
+    height: 500px;
+    width: 900px;
+    background-color: orangered;
+    border-radius: 50%;
+    animation-name: anime;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    margin-top: -250px;
+    margin-left: 60%;
+    filter: blur(30px);
+}
+@keyframes anime {
+    from{
+        transform: translate(10%,-10%) skew(2);
+    }
+    to{
+        transform: translate(-10%,10%) skew(0);
+    }
+}
+.secondpart{
+    height: 95%;
+    width: 96%;
+    border-radius: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+}
+.third{
+    height: 50vh;
+    width: 100%;
+    background-color: #EEEAE4;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+.third h1{
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.third img{
+    height: 70px;
+}
+@keyframes move {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-300%);
+    }
+}
+.fourth{
+    height: 100vh;
+    width: 100%;
+    background-color: #EEEAE4;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+}
+.fourth .circle{
+    height: 500px;
+    width: 500px;
+    background-color: orangered;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: 450px;
+    filter: blur(20px);
+    z-index: 99;
+    animation-name: anime;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.fourth .minicircle{
+    height: 500px;
+    width: 500px;
+    background-color: rgb(255, 115, 0);
+    border-radius: 50%;
+    margin-left: 500px;
+    margin-top: 400px;
+    filter: blur(20px);
+    position: absolute;
+    top: -250px;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes scroll {
+    from{
+        transform: translate(10%,-10%) skew(2);
+    }
+    to{
+        transform: translate(-10%,10%) skew(0);
+    }
+}
+.fourthpart img{
+    height: 200px;
+    border-radius: 20px;
+    margin-top: 250px;
+}
+.fourthpart p{
+    font-size: 15px;
+    width: 300px;
+    margin-top: 50px;
+    line-height: 25px;
+}
+.fourth #group{
+    font-size: 60px;
+    font-weight: 700;
+    width: 900px;
+    line-height: 65px;
+    z-index: 9999;
+}
+.fifth{
+    height: 120vh;
+    width: 100%;
+    background-color: #EEEAE4;
+    cursor: pointer;
+    position: relative;
+}
+.block{
+    height: calc(100%/7);
+}
+.fifthpart{
+    height:100%;
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+.fifthpart h1{
+    font-size: 55px;
+    z-index: 9999;
+}
+.fifthpart h5{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: end;
+    z-index: 9;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+}
+.fifthpart h6{
+    font-size: 15px;
+    font-weight: 100;
+    opacity: .5;
+    z-index: 99999;
+}
+.div{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 153, 0);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.5s;
+}
+.fifthpart:hover .div{
+    top: 0;
+}
+.block:hover .divpart img{
+    opacity: 1;
+}
+.fifth .divpart{
+    height: 450px;
+    width: 350px;
+    position:absolute;
+    z-index: 99;
+    left: 55%;
+    top: 150px;
+    border-radius: 20PX;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+.divpart img{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    object-fit: cover;
+    object-position: center;
+}
+.sixth{
+    height: 150vh;
+    width: 100%;
+    background-color: #EEEAE4;
+    padding: 50px 30px;
+}
+.sixth button{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #EEEAE4;
+    border-radius: 50px;
+    border: 1px solid #b4b1ac;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.sixth button::after{
+    content: "";
+    height: 42px;
+    width: 140px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: black;
+    border-radius: 50px;
+    transition: all ease 0.5s;
+}
+.sixth button:hover::after{
+    top: 0;
+    z-index: -1;
+}
+.sixth button:hover{
+    color: #EEEAE4;
+    z-index: 99999;
+}
+.sixthpart{
+    height: 90%;
+    width: 100%;
+    background-color: black;
+    border-radius:20px ;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.sixthpartchild{
+    height: 100%;
+    width: 55%;
+    border-radius: 20px;
+    background-image: url(https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project-p-1080.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.sixthpartchild1{
+    padding: 200px 150px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+.child1{
+    height: 250px;
+    width: 2px;
+    border-top: 50px;
+    border-bottom: 50px;
+    background-color: #b4b1ac92;
+    overflow: hidden;
+}
+.child2{
+    height: 35%;
+    width: 100%;
+    border-bottom: 50px;
+    background-color: orangered;
+}
+.sixthpartchild1 h1{
+    color: #fff;
+    font-size: 75px;
+    font-weight: 700;
+    width: 200px;
+    line-height: 80px;
+    cursor: pointer;
+}
+.sixthpartchild1 h1 span{
+    color: #575654;
+}
+.sixthpartchild1 p{
+    position: absolute;
+    color: #fff;
+    top: 60%;
+    line-height: 25px;
+}
+.seventh{
+    height: 90vh;
+    width: 100%;
+    background-color: #EEEAE4;
+    padding: 100px 0px;
+    position: relative;
+    padding-left: 100px;
+}
+.seventh img{
+    height: 9px;
+    padding-right: 5px;
+}
+.seventh h4{
+    font-size: 14px;
+    font-weight: 400;
+}
+.cursor{
+    height: 100px;
+    width: 100px;
+    background-color: orangered;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    position: absolute;
+    opacity: 0;
+}
+.seventhpart{
+    height: 400px;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    overflow-x: auto;
+    cursor: none;
+}
+.seventhpart::-webkit-scrollbar{
+    display: none;
+}
+.seventhchild{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 0px 20px;
+    border-left: 1px solid rgb(189, 187, 187);
+}
+.seventhchild img{
+    height: 70px;
+}
+.seventhchild p{
+    width: 270px;
+    line-height: 25px;
+}
+.last{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+}   
+.lastpart{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 100px;
+}
+.lastpartchild h1{
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+.lastpartchild h1:hover{
+    color: #b4b1ac;
+}
+.lastpartchild p{
+    color: #fff;
+    font-size: 20px;
+    width: 400px;
+}
+.lastpartchild input{
+    padding: 12px 0px;
+    padding-right: 160px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #b4b1ac;
+    margin-top: 80px;
+}
+.lastpartchild input::placeholder{
+    font-size: 17px;
+}
+.lastpartchild i{
+    color: #fff;
+    font-size: 20px;
+    margin-left: -30px;
+}
+.lastpart1{
+    width: 100%;
+    height: 40vh;
+    border-bottom: 1px solid #a8a7a79a;
+    padding: 0px 40px;
+}
+.lastpart1 img{
+    height: 260px;
+}
+.lastpart2{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    color: #8d8d8c;
+}
+.lastpart2 h4{
+    font-weight: 400;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+.lastpart2 h4:hover{
+    color: #fff;
+    text-decoration: underline;
+}
